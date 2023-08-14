@@ -1,0 +1,8 @@
+<mat-stepper>
+  <mat-step *ngFor="let step of steps" [stepControl]="formGroup">
+    <ng-template matStepLabel>
+      <h2>{{step.stepLabel}}</h2>
+    </ng-template>
+    <ng-template appBuildStep [data]="step"></ng-template>
+  </mat-step>
+</mat-stepper>
